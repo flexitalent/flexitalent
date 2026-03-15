@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FlexiTalent is a premium digital creative agency specializing in graphic design, brand building, and social media marketing.">
+    <title>FlexiTalent | Digital Creative Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Outfit', 'sans-serif'] },
+                    colors: { brand: { dark: '#0f172a', primary: '#3b82f6', secondary: '#8b5cf6', accent: '#f43f5e', light: '#f8fafc' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-white font-sans antialiased selection:bg-brand-primary selection:text-white">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-brand-dark/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-heading font-bold text-white tracking-tighter">
+                        Flexi<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Talent</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-brand-primary font-medium transition-colors duration-200">Home</a>
+                    <a href="about.html" class="text-gray-300 hover:text-white transition-colors duration-200 font-medium">About</a>
+                    <a href="services.html" class="text-gray-300 hover:text-white transition-colors duration-200 font-medium">Services</a>
+                    <a href="portfolio.html" class="text-gray-300 hover:text-white transition-colors duration-200 font-medium">Portfolio</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-white transition-colors duration-200 font-medium">Contact</a>
+                    <a href="contact.html" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-medium hover:shadow-lg hover:shadow-brand-primary/30 transition-all duration-300 transform hover:-translate-y-0.5">Let's Talk</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-b border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-white bg-white/5 rounded-md">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">About</a>
+                <a href="services.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Services</a>
+                <a href="portfolio.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Portfolio</a>
+                <a href="contact.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-primary/20 rounded-full mix-blend-screen filter blur-[120px] opacity-60 animate-float"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-secondary/20 rounded-full mix-blend-screen filter blur-[120px] opacity-60 animate-float-delayed"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="reveal-left">
+                    <div class="inline-flex items-center px-4 py-2 rounded-full glass mb-6">
+                        <span class="w-2 h-2 rounded-full bg-brand-accent mr-3 animate-pulse"></span>
+                        <span class="text-sm font-medium tracking-wide text-gray-300 uppercase">Award Winning Digital Agency</span>
+                    </div>
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-heading font-extrabold leading-tight mb-6">
+                        We Build <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent">Digital Brands</span><br>
+                        That Inspire.
+                    </h1>
+                    <p class="text-lg text-gray-400 mb-8 max-w-lg leading-relaxed">
+                        FlexiTalent is a creative agency delivering out-of-the-box design, branding, and digital strategies to help your business stand out and scale globally.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="contact.html" class="px-8 py-4 rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold text-center hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transition-all duration-300 transform hover:-translate-y-1">Get Started Today</a>
+                        <a href="services.html" class="px-8 py-4 rounded-full glass text-white font-semibold text-center hover:bg-white/10 transition-all duration-300 flex items-center justify-center group">
+                            Our Services <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative reveal-right">
+                    <div class="relative z-10 rounded-2xl overflow-hidden glass p-2 shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Creative Digital Dashboard" class="rounded-xl w-full object-cover shadow-2xl">
+                    </div>
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-accent rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-brand-primary rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Overview -->
+    <section class="py-24 bg-brand-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-brand-primary font-semibold tracking-wide uppercase text-sm mb-2">What We Do</h2>
+                <h3 class="text-4xl md:text-5xl font-heading font-bold mb-4">Our Core Expertise</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">We provide comprehensive digital solutions tailored to elevate your business.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl reveal relative group overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-primary/10 rounded-bl-full transition-all duration-500 group-hover:bg-brand-primary/20 group-hover:scale-110"></div>
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-brand-primary to-blue-600 flex items-center justify-center text-white text-2xl mb-6 shadow-lg shadow-brand-primary/30">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold font-heading mb-4 group-hover:text-brand-primary transition-colors">Graphic Design</h4>
+                    <p class="text-gray-400 mb-6 line-clamp-3">Stunning visual communications that capture attention and clearly convey your message through breathtaking design.</p>
+                    <a href="services.html" class="text-white font-medium flex items-center group/link">
+                        Learn more <i class="fas fa-arrow-right ml-2 text-brand-primary group-hover/link:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl reveal relative group overflow-hidden" style="transition-delay: 100ms;">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-secondary/10 rounded-bl-full transition-all duration-500 group-hover:bg-brand-secondary/20 group-hover:scale-110"></div>
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-brand-secondary to-purple-600 flex items-center justify-center text-white text-2xl mb-6 shadow-lg shadow-brand-secondary/30">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold font-heading mb-4 group-hover:text-brand-secondary transition-colors">Brand Building</h4>
+                    <p class="text-gray-400 mb-6 line-clamp-3">Developing strong identities that resonate with your target audience and establish a lasting presence in the market.</p>
+                    <a href="services.html" class="text-white font-medium flex items-center group/link">
+                        Learn more <i class="fas fa-arrow-right ml-2 text-brand-secondary group-hover/link:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl reveal relative group overflow-hidden" style="transition-delay: 200ms;">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-accent/10 rounded-bl-full transition-all duration-500 group-hover:bg-brand-accent/20 group-hover:scale-110"></div>
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-brand-accent to-pink-600 flex items-center justify-center text-white text-2xl mb-6 shadow-lg shadow-brand-accent/30">
+                        <i class="fas fa-share-nodes"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold font-heading mb-4 group-hover:text-brand-accent transition-colors">Social Media</h4>
+                    <p class="text-gray-400 mb-6 line-clamp-3">Strategic content and marketing that builds community, drives engagement, and translates into real growth.</p>
+                    <a href="services.html" class="text-white font-medium flex items-center group/link">
+                        Learn more <i class="fas fa-arrow-right ml-2 text-brand-accent group-hover/link:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12 reveal">
+                <a href="services.html" class="inline-flex items-center px-6 py-3 border border-white/20 rounded-full hover:bg-white/10 transition-colors">
+                    View All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Counters -->
+    <section id="stats-section" class="py-20 relative overflow-hidden border-t border-white/5 border-b">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-primary/10 to-brand-secondary/10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="reveal" style="transition-delay: 0ms;">
+                    <h4 class="text-5xl font-heading font-bold text-white mb-2"><span class="counter" data-target="250">0</span>+</h4>
+                    <p class="text-gray-400">Projects Completed</p>
+                </div>
+                <div class="reveal" style="transition-delay: 100ms;">
+                    <h4 class="text-5xl font-heading font-bold text-white mb-2"><span class="counter" data-target="150">0</span>+</h4>
+                    <p class="text-gray-400">Happy Clients</p>
+                </div>
+                <div class="reveal" style="transition-delay: 200ms;">
+                    <h4 class="text-5xl font-heading font-bold text-white mb-2"><span class="counter" data-target="15">0</span>+</h4>
+                    <p class="text-gray-400">Awards Won</p>
+                </div>
+                <div class="reveal" style="transition-delay: 300ms;">
+                    <h4 class="text-5xl font-heading font-bold text-white mb-2"><span class="counter" data-target="5">0</span>+</h4>
+                    <p class="text-gray-400">Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section class="py-24 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+                <div>
+                    <h2 class="text-brand-primary font-semibold tracking-wide uppercase text-sm mb-2">Portfolio</h2>
+                    <h3 class="text-4xl md:text-5xl font-heading font-bold">Featured Works</h3>
+                </div>
+                <a href="portfolio.html" class="mt-6 md:mt-0 inline-flex items-center px-6 py-3 border border-white/20 rounded-full hover:bg-white/10 transition-colors">
+                    See All Projects
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <a href="portfolio.html" class="portfolio-item group relative rounded-2xl overflow-hidden glass p-1 reveal-left">
+                    <div class="relative rounded-xl overflow-hidden aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80" alt="Brand Identity Setup" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent flex flex-col justify-end p-8">
+                            <span class="text-brand-primary font-medium mb-2">Brand Identity</span>
+                            <h4 class="text-2xl font-bold font-heading text-white">Lumina Tech Evolution</h4>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="portfolio.html" class="portfolio-item group relative rounded-2xl overflow-hidden glass p-1 reveal-right">
+                    <div class="relative rounded-xl overflow-hidden aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="Social Media Campaign" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent flex flex-col justify-end p-8">
+                            <span class="text-brand-secondary font-medium mb-2">Social Media</span>
+                            <h4 class="text-2xl font-bold font-heading text-white">Vibe Marketing Campaign</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-brand-dark relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/10 rounded-full mix-blend-screen filter blur-[150px] opacity-50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h3 class="text-4xl md:text-5xl font-heading font-bold mb-4">What Our Clients Say</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl reveal" style="transition-delay: 0ms;">
+                    <div class="flex text-brand-secondary mb-6">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"FlexiTalent completely transformed our brand identity. The new look is modern, sleek, and perfectly captures our mission."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center text-xl font-bold mr-4 border border-white/10">S</div>
+                        <div>
+                            <h5 class="font-bold">Sarah Jenkins</h5>
+                            <span class="text-sm text-gray-500">CEO, TechNova</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl reveal" style="transition-delay: 150ms;">
+                    <div class="flex text-brand-secondary mb-6">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"Their social media marketing strategies sky-rocketed our engagement by 300% in just two months. Highly recommended agency!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-brand-primary to-blue-900 flex items-center justify-center text-xl font-bold mr-4 border border-white/10">M</div>
+                        <div>
+                            <h5 class="font-bold">Mike Chen</h5>
+                            <span class="text-sm text-gray-500">Marketing Director</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl reveal" style="transition-delay: 300ms;">
+                    <div class="flex text-brand-secondary mb-6">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"A brilliant team of creatives! They delivered top-notch graphic design work that elevated our entire marketing collateral suite."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-brand-accent to-pink-900 flex items-center justify-center text-xl font-bold mr-4 border border-white/10">A</div>
+                        <div>
+                            <h5 class="font-bold">Anna Roberts</h5>
+                            <span class="text-sm text-gray-500">Founder, BloomCo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-20 bg-brand-dark px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto glass-card rounded-3xl p-10 md:p-16 text-center relative overflow-hidden reveal">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-primary/20 to-brand-secondary/20 z-0"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-heading font-bold mb-6">Ready to Transform Your Brand?</h2>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">Let's collaborate to build something extraordinary. Contact us today to discuss your next big project.</p>
+                <a href="contact.html" class="inline-block px-10 py-5 rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-bold text-lg hover:shadow-[0_0_30px_rgba(139,92,246,0.6)] transition-all duration-300 transform hover:-translate-y-1">
+                    Start Your Project Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark pt-20 pb-10 border-t border-white/10 relative overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-primary/10 rounded-full mix-blend-screen filter blur-[100px] opacity-50"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-secondary/10 rounded-full mix-blend-screen filter blur-[100px] opacity-50"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 lg:col-span-1">
+                    <a href="index.html" class="text-3xl font-heading font-bold text-white tracking-tighter mb-6 inline-block">
+                        Flexi<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Talent</span>
+                    </a>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Elevating brands through stunning digital experiences and strategic creative solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-primary transition-all duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-primary transition-all duration-300"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-primary transition-all duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-primary transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-heading font-semibold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Our Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-heading font-semibold text-lg mb-6">Services</h4>
+                    <ul class="space-y-4">
+                        <li><a href="services.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Graphic Design</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Brand Building</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Social Media Marketing</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Digital Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-heading font-semibold text-lg mb-6">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest insights.</p>
+                    <form class="space-y-3" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-brand-primary text-white placeholder-gray-500 transition-colors">
+                        <button type="submit" class="w-full px-4 py-3 bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-medium rounded-lg hover:shadow-lg hover:shadow-brand-primary/30 transition-all duration-300">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                    &copy; 2026 FlexiTalent. All rights reserved.
+                </p>
+                <div class="flex space-x-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

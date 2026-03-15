@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact FlexiTalent. Let's start discussing your new design or digital project today.">
+    <title>Contact Us | FlexiTalent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Outfit', 'sans-serif'] },
+                    colors: { brand: { dark: '#0f172a', primary: '#3b82f6', secondary: '#8b5cf6', accent: '#f43f5e', light: '#f8fafc' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-white font-sans antialiased selection:bg-brand-primary selection:text-white">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-brand-dark/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-heading font-bold text-white tracking-tighter">
+                        Flexi<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Talent</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors duration-200 font-medium">Home</a>
+                    <a href="about.html" class="text-gray-300 hover:text-white transition-colors duration-200 font-medium">About</a>
+                    <a href="services.html" class="text-gray-300 hover:text-white transition-colors duration-200 font-medium">Services</a>
+                    <a href="portfolio.html" class="text-gray-300 hover:text-white transition-colors duration-200 font-medium">Portfolio</a>
+                    <a href="contact.html" class="text-brand-primary font-medium transition-colors duration-200">Contact</a>
+                    <a href="contact.html" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-medium hover:shadow-lg hover:shadow-brand-primary/30 transition-all duration-300 transform hover:-translate-y-0.5">Let's Talk</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-b border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">About</a>
+                <a href="services.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Services</a>
+                <a href="portfolio.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Portfolio</a>
+                <a href="contact.html" class="block px-3 py-2 text-base font-medium text-white bg-white/5 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="pt-32 pb-16 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-dark z-0"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-brand-primary/20 rounded-[100%] mix-blend-screen filter blur-[100px] opacity-70 animate-pulse"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold mb-6 reveal">Get in <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Touch</span></h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto reveal" style="transition-delay: 100ms;">Ready to start your next big project? Drop us a line and let's craft something amazing together.</p>
+        </div>
+    </header>
+
+    <!-- Contact Info & Form -->
+    <section class="py-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                
+                <!-- Contact Information -->
+                <div class="lg:col-span-1 space-y-8 reveal-left">
+                    <div class="glass-card p-8 rounded-2xl flex items-start">
+                        <div class="w-12 h-12 rounded-xl bg-brand-primary/20 flex items-center justify-center text-brand-primary text-xl mr-6 flex-shrink-0">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold font-heading mb-2">Our Office</h4>
+                            <p class="text-gray-400">123 Creative Avenue, Suite 450<br>Design City, DC 90210</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card p-8 rounded-2xl flex items-start">
+                        <div class="w-12 h-12 rounded-xl bg-brand-secondary/20 flex items-center justify-center text-brand-secondary text-xl mr-6 flex-shrink-0">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold font-heading mb-2">Email Us</h4>
+                            <a href="mailto:hello@flexitalent.com" class="text-gray-400 hover:text-brand-primary transition-colors">hello@flexitalent.com</a><br>
+                            <a href="mailto:support@flexitalent.com" class="text-gray-400 hover:text-brand-primary transition-colors">support@flexitalent.com</a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-2xl flex items-start">
+                        <div class="w-12 h-12 rounded-xl bg-brand-accent/20 flex items-center justify-center text-brand-accent text-xl mr-6 flex-shrink-0">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold font-heading mb-2">Call Us</h4>
+                            <a href="tel:+1234567890" class="text-gray-400 hover:text-brand-accent transition-colors">+1 (234) 567-890</a><br>
+                            <span class="text-gray-500 text-sm">Mon-Fri: 9am - 6pm</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <h4 class="text-lg font-bold font-heading mb-4 pl-2">Follow Our Journey</h4>
+                        <div class="flex space-x-4 pl-2">
+                            <a href="#" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-300 hover:text-white hover:bg-brand-primary hover:shadow-lg hover:shadow-brand-primary/30 transition-all duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-300 hover:text-white hover:bg-brand-primary hover:shadow-lg hover:shadow-brand-primary/30 transition-all duration-300"><i class="fab fa-linkedin-in text-xl"></i></a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-300 hover:text-white hover:bg-brand-primary hover:shadow-lg hover:shadow-brand-primary/30 transition-all duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-300 hover:text-white hover:bg-brand-primary hover:shadow-lg hover:shadow-brand-primary/30 transition-all duration-300"><i class="fab fa-dribbble text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-2 reveal-right">
+                    <div class="glass-card p-10 md:p-12 rounded-3xl h-full relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full filter blur-[80px]"></div>
+                        <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-secondary/10 rounded-full filter blur-[80px]"></div>
+                        
+                        <h3 class="text-3xl font-heading font-bold mb-8 relative z-10">Send a Message</h3>
+                        
+                        <form class="space-y-6 relative z-10" onsubmit="event.preventDefault(); alert('Message Sent Successfully!');">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-400 mb-2">First Name</label>
+                                    <input type="text" required class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-brand-primary text-white placeholder-gray-500 transition-all duration-300" placeholder="John">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-400 mb-2">Last Name</label>
+                                    <input type="text" required class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-brand-primary text-white placeholder-gray-500 transition-all duration-300" placeholder="Doe">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
+                                <input type="email" required class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-brand-primary text-white placeholder-gray-500 transition-all duration-300" placeholder="john@example.com">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Interested Service</label>
+                                <select class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-brand-primary text-white transition-all duration-300 appearance-none">
+                                    <option value="" disabled selected class="text-gray-900">Select a service</option>
+                                    <option value="graphic_design" class="text-gray-900">Graphic Design</option>
+                                    <option value="branding" class="text-gray-900">Brand Building</option>
+                                    <option value="social_media" class="text-gray-900">Social Media Marketing</option>
+                                    <option value="other" class="text-gray-900">Other / Consultation</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                                <textarea rows="5" required class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl focus:border-brand-primary text-white placeholder-gray-500 transition-all duration-300 resize-none" placeholder="Tell us about your project..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full py-4 px-8 rounded-xl bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-bold text-lg hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300 transform hover:-translate-y-1">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-12 pb-24 relative z-10 reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="rounded-3xl overflow-hidden shadow-2xl glass p-2">
+                <div class="rounded-2xl overflow-hidden h-[400px] bg-gray-900 relative">
+                    <!-- High-quality Google Map Embed visually styled for dark mode -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.95373531590464!3d-37.81720997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4bfa8467ff%3A0xb3516518175d2729!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1614749666014!5m2!1sen!2sus" width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark pt-20 pb-10 border-t border-white/10 relative overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-primary/10 rounded-full mix-blend-screen filter blur-[100px] opacity-50"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-secondary/10 rounded-full mix-blend-screen filter blur-[100px] opacity-50"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Footer Same as Index -->
+                <div class="col-span-1 lg:col-span-1">
+                    <a href="index.html" class="text-3xl font-heading font-bold text-white tracking-tighter mb-6 inline-block">
+                        Flexi<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Talent</span>
+                    </a>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Elevating brands through stunning digital experiences and strategic creative solutions.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-primary transition-all duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-primary transition-all duration-300"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-primary transition-all duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-primary transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-heading font-semibold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Our Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-heading font-semibold text-lg mb-6">Services</h4>
+                    <ul class="space-y-4">
+                        <li><a href="services.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Graphic Design</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Brand Building</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Social Media Marketing</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Digital Strategy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-heading font-semibold text-lg mb-6">Newsletter</h4>
+                    <form class="space-y-3" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-brand-primary text-white placeholder-gray-500 transition-colors">
+                        <button type="submit" class="w-full px-4 py-3 bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-medium rounded-lg hover:shadow-lg hover:shadow-brand-primary/30 transition-all duration-300">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2026 FlexiTalent. All rights reserved.</p>
+                <div class="flex space-x-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

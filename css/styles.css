@@ -1,0 +1,25 @@
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; background-color: #0f172a; color: #f8fafc; }
+/* Glassmorphism Classes */
+.glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+.glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.3s ease; }
+.glass-card:hover { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); transform: translateY(-5px); }
+/* Animations */
+@keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-delayed { animation: float 8s ease-in-out infinite; animation-delay: 2s; }
+.text-gradient { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-image: linear-gradient(to right, #3b82f6, #8b5cf6); }
+/* Scroll Reveal */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+.reveal-left { opacity: 0; transform: translateX(-50px); transition: all 0.8s ease-out; }
+.reveal-left.active { opacity: 1; transform: translateX(0); }
+.reveal-right { opacity: 0; transform: translateX(50px); transition: all 0.8s ease-out; }
+.reveal-right.active { opacity: 1; transform: translateX(0); }
+/* Portfolio Hover Effects */
+.portfolio-item .overlay { opacity: 0; transition: all 0.3s ease; }
+.portfolio-item:hover .overlay { opacity: 1; }
+.portfolio-item img { transition: all 0.5s ease; }
+.portfolio-item:hover img { transform: scale(1.1); }
+/* Form inputs */
+input:focus, textarea:focus { outline: none; border-color: #3b82f6; box-shadow: 0 0 10px rgba(59, 130, 246, 0.2); }

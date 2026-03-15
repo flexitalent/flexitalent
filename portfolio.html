@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FlexiTalent Portfolio. Showcasing our best works in graphic design, branding, and social media campaigns.">
+    <title>Portfolio | FlexiTalent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Outfit', 'sans-serif'] },
+                    colors: { brand: { dark: '#0f172a', primary: '#3b82f6', secondary: '#8b5cf6', accent: '#f43f5e', light: '#f8fafc' } }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-white font-sans antialiased selection:bg-brand-primary selection:text-white">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-brand-dark/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-heading font-bold text-white tracking-tighter">
+                        Flexi<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Talent</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors duration-200 font-medium">Home</a>
+                    <a href="about.html" class="text-gray-300 hover:text-white transition-colors duration-200 font-medium">About</a>
+                    <a href="services.html" class="text-gray-300 hover:text-white transition-colors duration-200 font-medium">Services</a>
+                    <a href="portfolio.html" class="text-brand-primary font-medium transition-colors duration-200">Portfolio</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-white transition-colors duration-200 font-medium">Contact</a>
+                    <a href="contact.html" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-medium hover:shadow-lg hover:shadow-brand-primary/30 transition-all duration-300 transform hover:-translate-y-0.5">Let's Talk</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-b border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">About</a>
+                <a href="services.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Services</a>
+                <a href="portfolio.html" class="block px-3 py-2 text-base font-medium text-white bg-white/5 rounded-md">Portfolio</a>
+                <a href="contact.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="pt-32 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-dark z-0"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-brand-accent/20 rounded-[100%] mix-blend-screen filter blur-[100px] opacity-70 animate-pulse"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold mb-6 reveal">Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">Portfolio</span></h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto reveal" style="transition-delay: 100ms;">A curated collection of our finest work. Explore how we have transformed ideas into striking digital realities across various industries.</p>
+        </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section class="py-12 pb-24 relative z-10 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Filter Categories -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16 reveal">
+                <button class="filter-btn px-6 py-2 rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-medium transition-all duration-300" data-filter="all">All Projects</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-white/5 hover:bg-white/10 text-gray-300 font-medium transition-all duration-300" data-filter="graphic">Graphic Design</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-white/5 hover:bg-white/10 text-gray-300 font-medium transition-all duration-300" data-filter="branding">Branding</button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-white/5 hover:bg-white/10 text-gray-300 font-medium transition-all duration-300" data-filter="social">Social Media</button>
+            </div>
+
+            <!-- Grid Items -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: Branding -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden glass p-1 reveal" data-category="branding" style="transition-delay: 0ms;">
+                    <div class="relative rounded-xl overflow-hidden aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80" alt="Brand Identity" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent flex flex-col justify-end p-8">
+                            <span class="inline-block px-3 py-1 mb-3 text-xs font-semibold rounded-full bg-brand-secondary/30 text-brand-secondary w-max">Branding</span>
+                            <h4 class="text-2xl font-bold font-heading text-white">Lumina Tech Evolution</h4>
+                            <p class="text-gray-300 mt-2 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Complete visual identity system for a sustainable tech startup.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Social Media -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden glass p-1 reveal" data-category="social" style="transition-delay: 100ms;">
+                    <div class="relative rounded-xl overflow-hidden aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="Social Media Campaign" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent flex flex-col justify-end p-8">
+                            <span class="inline-block px-3 py-1 mb-3 text-xs font-semibold rounded-full bg-brand-accent/30 text-brand-accent w-max">Social Media</span>
+                            <h4 class="text-2xl font-bold font-heading text-white">Vibe Marketing Campaign</h4>
+                            <p class="text-gray-300 mt-2 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Influencer-led campaign generating over 2M impressions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Graphic Design -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden glass p-1 reveal" data-category="graphic" style="transition-delay: 200ms;">
+                    <div class="relative rounded-xl overflow-hidden aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Graphic Design Assets" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent flex flex-col justify-end p-8">
+                            <span class="inline-block px-3 py-1 mb-3 text-xs font-semibold rounded-full bg-brand-primary/30 text-brand-primary w-max">Graphic Design</span>
+                            <h4 class="text-2xl font-bold font-heading text-white">Horizon Event Posters</h4>
+                            <p class="text-gray-300 mt-2 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Striking typographic and illustrative posters for a global summit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Branding -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden glass p-1 reveal" data-category="branding" style="transition-delay: 0ms;">
+                    <div class="relative rounded-xl overflow-hidden aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=800&q=80" alt="Brand Revamp" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent flex flex-col justify-end p-8">
+                            <span class="inline-block px-3 py-1 mb-3 text-xs font-semibold rounded-full bg-brand-secondary/30 text-brand-secondary w-max">Branding</span>
+                            <h4 class="text-2xl font-bold font-heading text-white">Aura Coffee Co.</h4>
+                            <p class="text-gray-300 mt-2 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Complete rebrand and packaging design for an artisanal coffee roaster.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Graphic Design -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden glass p-1 reveal" data-category="graphic" style="transition-delay: 100ms;">
+                    <div class="relative rounded-xl overflow-hidden aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80" alt="Digital Illustration" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent flex flex-col justify-end p-8">
+                            <span class="inline-block px-3 py-1 mb-3 text-xs font-semibold rounded-full bg-brand-primary/30 text-brand-primary w-max">Graphic Design</span>
+                            <h4 class="text-2xl font-bold font-heading text-white">Neon Cyber Illustrations</h4>
+                            <p class="text-gray-300 mt-2 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">A custom 3D illustration pack created for a gaming interface.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Social Media -->
+                <div class="portfolio-item group relative rounded-2xl overflow-hidden glass p-1 reveal" data-category="social" style="transition-delay: 200ms;">
+                    <div class="relative rounded-xl overflow-hidden aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Social Analytics" class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/50 to-transparent flex flex-col justify-end p-8">
+                            <span class="inline-block px-3 py-1 mb-3 text-xs font-semibold rounded-full bg-brand-accent/30 text-brand-accent w-max">Social Media</span>
+                            <h4 class="text-2xl font-bold font-heading text-white">Zenith Fitness App</h4>
+                            <p class="text-gray-300 mt-2 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Instagram engagement campaign resulting in 150k app downloads.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-20 text-center reveal">
+                <p class="text-gray-400 mb-6">Want to see more of our work?</p>
+                <a href="contact.html" class="inline-block px-8 py-4 rounded-full bg-white/5 border border-white/20 text-white font-medium hover:bg-white/10 transition-all duration-300">
+                    Get in Touch for a Full Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark pt-20 pb-10 border-t border-white/10 relative overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-primary/10 rounded-full mix-blend-screen filter blur-[100px] opacity-50"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-secondary/10 rounded-full mix-blend-screen filter blur-[100px] opacity-50"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Footer Same as Index -->
+                <div class="col-span-1 lg:col-span-1">
+                    <a href="index.html" class="text-3xl font-heading font-bold text-white tracking-tighter mb-6 inline-block">
+                        Flexi<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Talent</span>
+                    </a>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Elevating brands through stunning digital experiences and strategic creative solutions.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-primary transition-all duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-primary transition-all duration-300"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-primary transition-all duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-primary transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-heading font-semibold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Our Portfolio</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-heading font-semibold text-lg mb-6">Services</h4>
+                    <ul class="space-y-4">
+                        <li><a href="services.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Graphic Design</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Brand Building</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Social Media Marketing</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-200">Digital Strategy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-heading font-semibold text-lg mb-6">Newsletter</h4>
+                    <form class="space-y-3" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-brand-primary text-white placeholder-gray-500 transition-colors">
+                        <button type="submit" class="w-full px-4 py-3 bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-medium rounded-lg hover:shadow-lg hover:shadow-brand-primary/30 transition-all duration-300">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2026 FlexiTalent. All rights reserved.</p>
+                <div class="flex space-x-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
